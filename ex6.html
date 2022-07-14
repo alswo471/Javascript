@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            window.addEventListener("DOMContentLoaded", function() {
+                const div = document.createElement("div");
+                const text = document.createTextNode("텍스트");
+                const text2 = document.createTextNode("텍스트2");
+                div.appendChild(text);
+                div.insertBefore(text2, text);
+                div.id = "text1";
+                div.className = "text";
+                div.dataset.price = 10000;
+                div.addEventListener("click", function(){
+                    alert("클릭!");
+                });
+                console.log(div);
+
+                const wrapEl = document.getElementById("wrap");
+                wrapEl.appendChild(div);
+            });
+        </script>
+        <div id="wrap"></div>
+    </body>
+</html>

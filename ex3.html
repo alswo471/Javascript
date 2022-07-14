@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+        <body>
+            <script>
+                window.addEventListener("DOMContentLoaded", function() {
+                const linkEl = document.getElementById("link");
+                linkEl.setAttribute("href", "https://www.daum.net"); //속성값 변경
+                console.log(linkEl.getAttribute("href"));
+
+                linkEl.setAttribute("price", 20000); // 없는 추가하면 값 속성 추가됨
+
+                setTimeout(function() {
+                 linkEl.removeAttribute("price") // 3초 뒤에 속성 사라짐   
+                }, 3000);
+                });
+            </script>
+            <a href="https://www.naver.com" id="link">네이버</a>
+        </body>
+ 
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            window.addEventListener("DOMContentLoaded", function(){
+                const outerEl = document.getElementById("outer");
+                outerEl.addEventListener("click", function(e){
+                    console.log("this :" , this); //이벤트가 바인딩되어 있는 요소
+                    console.log("currentTarget : ", e.currentTarget); //이벤트가 바인딩되어 있는 요소
+                    console.log("target : ", e.target); //실제 클릭한 요소
+
+                    console.log(e.currentTarget.dataset.price);
+                    console.log(e.target.parentElement.dataset.price);
+                });
+            });
+        </script>
+        <div id="outer" data-price = "10000">
+            <div id="inner">클릭</div>
+        </div>
+    </body>
+</head>

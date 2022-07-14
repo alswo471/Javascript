@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            console.log("document.readyState : ", document.readyState);
+            // const button = document.getElementById("button");
+            // console.log(button);
+
+            window.addEventListener("DOMContentLoaded", function() {
+                console.log("DOM Tree 구성 완료!");
+                console.log("document.readyState : ", document.readyState);
+                const button = document.getElementById("button");
+            console.log(button);
+            });
+
+            window.addEventListener("load", function() {
+                console.log("리소스 로드 완료!");
+                console.log("document.readyState : ", document.readyState);
+            });
+        </script>
+       <h1>DOM Tree 학습...</h1> 
+        <button type="button" id="button">클릭!</button>
+    </body>
+</html>

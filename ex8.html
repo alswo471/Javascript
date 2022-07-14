@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            window.addEventListener("DOMContentLoaded", function(){
+                const button2El = document.getElementById("button2");
+                button2El.onclick = changeColor;
+                button2El.onclick = changeColor2;
+                //onclick 은 사용 X 함수가 묻침 
+
+                const button3El = document.getElementById("button3");
+                button3El.addEventListener("click", changeColor);
+                button3El.addEventListener("click", changeColor2);
+            });
+            
+                function changeColor(){
+                const textEl = document.getElementById("text");
+                textEl.style.color = "red";
+            } 
+                function changeColor2() {
+                    setTimeout(function() {
+                        const textEl = document.getElementById("text");
+                        textEl.style.color = "blue";
+                    }, 3000);
+            }
+                    </script>
+        <button type="button" onclick="changeColor();">클릭</button>
+        <button type="button" id="button2">클릭2</button>
+        <button type="button" id="button3">클릭3</button>
+        <div id="text">텍스트</div>
+    </body>
+</head>
